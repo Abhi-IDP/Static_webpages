@@ -1,0 +1,224 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.7">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica Neue'}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica Neue'; min-height: 15.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;August 2025 Metrics Dashboard&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Tailwind CSS for styling --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Chart.js for beautiful, animated charts --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://cdn.jsdelivr.net/npm/chart.js"&gt;&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Chart.js plugin to display labels directly on the chart --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0"&gt;&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Google Fonts for modern typography --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>/* Custom styles for a polished look */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-family: 'Inter', sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>-webkit-font-smoothing: antialiased;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>-moz-osx-font-smoothing: grayscale;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>/* Custom animation for elements to fade in smoothly */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>@keyframes fadeIn {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>from { opacity: 0; transform: translateY(20px); }</p>
+<p class="p1"><span class="Apple-converted-space">            </span>to { opacity: 1; transform: translateY(0); }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.fade-in {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>animation: fadeIn 0.8s ease-out forwards;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>/* Staggered animation delays */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.delay-1 { animation-delay: 0.2s; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.delay-2 { animation-delay: 0.4s; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.delay-3 { animation-delay: 0.6s; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body class="bg-gray-900 text-white flex items-center justify-center min-h-screen p-4 sm:p-6 lg:p-8"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="w-full max-w-6xl mx-auto"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Header --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;header class="text-center mb-8 md:mb-12 fade-in"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h1 class="text-4xl md:text-5xl font-extrabold tracking-tight"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>Monthly Metrics: &lt;span class="text-cyan-400"&gt;August 2025&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="text-lg md:text-xl text-gray-400 mt-2"&gt;A snapshot of Identity Provisioning and Offboarding activities.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/header&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Main content grid --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;main class="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8"&gt;</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- Card 1: ID Provisioning Breakdown Chart --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="lg:col-span-2 bg-gray-800/50 p-6 md:p-8 rounded-2xl shadow-2xl border border-gray-700/60 fade-in delay-1 opacity-0" style="backdrop-filter: blur(10px);"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h2 class="text-2xl font-bold mb-1 text-cyan-300"&gt;Identity Provisioning by Channel&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="text-gray-400 mb-6"&gt;Total new identities created in August.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="relative h-64 md:h-80"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;canvas id="provisioningChart"&gt;&lt;/canvas&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- Card 2: Offboarding KPI --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="bg-gray-800/50 p-6 md:p-8 rounded-2xl shadow-2xl border border-gray-700/60 flex flex-col justify-center items-center text-center fade-in delay-2 opacity-0" style="backdrop-filter: blur(10px);"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h2 class="text-2xl font-bold mb-4 text-amber-300"&gt;Employee Offboarding&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="text-gray-400 mb-6"&gt;Total records processed for departing employees.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="text-6xl md:text-7xl font-extrabold text-amber-400" id="offboarding-count"&gt;0&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/main&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.addEventListener('DOMContentLoaded', () =&gt; {</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// --- Animated Counter for Offboarding Metric ---</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const animateCountUp = (elementId, finalValue) =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const element = document.getElementById(elementId);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const duration = 2000; // Animation duration in milliseconds</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const frameRate = 1000 / 60; // 60 frames per second</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const totalFrames = Math.round(duration / frameRate);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>let frame = 0;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>const counter = setInterval(() =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>frame++;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>const progress = frame / totalFrames;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>// Ease-out function for a smoother stop</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>const easedProgress = 1 - Math.pow(1 - progress, 3);</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>const currentValue = Math.round(finalValue * easedProgress);</p>
+<p class="p2"><span class="Apple-converted-space">                    </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>element.textContent = currentValue.toLocaleString();</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>if (frame === totalFrames) {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>clearInterval(counter);</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>element.textContent = finalValue.toLocaleString(); // Ensure it ends on the exact number</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}, frameRate);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>};</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Data from your "Offboarding_metrics.xlsx" file</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const offboardingTotal = 9033;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>animateCountUp('offboarding-count', offboardingTotal);</p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// --- Chart.js Donut Chart for Provisioning ---</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Register the datalabels plugin globally for all charts</p>
+<p class="p1"><span class="Apple-converted-space">            </span>Chart.register(ChartDataLabels);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>const ctx = document.getElementById('provisioningChart').getContext('2d');</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Data aggregated from your "IDP_Metrics_Report.xlsx - August_Report.csv"</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const provisioningData = {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>labels: ['HR (Employees)', 'DRMS (Contractors)', 'ID Portal', 'CRMS (Vendors)'],</p>
+<p class="p1"><span class="Apple-converted-space">                </span>datasets: [{</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>label: 'Provisioned Identities',</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>data: [2917, 1672, 428, 399], // HR, DRMS, ID Portal Total, CRMS</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>backgroundColor: [</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>'rgba(34, 197, 94, 0.7)',<span class="Apple-converted-space">  </span>// Green</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>'rgba(59, 130, 246, 0.7)', // Blue</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>'rgba(168, 85, 247, 0.7)', // Purple</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>'rgba(234, 179, 8, 0.7)' <span class="Apple-converted-space">  </span>// Yellow</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>],</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>borderColor: [</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>'#22c55e',</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>'#3b82f6',</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>'#a855f7',</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>'#eab308'</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>],</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>borderWidth: 2,</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>hoverOffset: 16 // Makes the segment pop out on hover</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}]</p>
+<p class="p1"><span class="Apple-converted-space">            </span>};</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Chart configuration for a professional look and feel</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const chartConfig = {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>type: 'doughnut',</p>
+<p class="p1"><span class="Apple-converted-space">                </span>data: provisioningData,</p>
+<p class="p1"><span class="Apple-converted-space">                </span>options: {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>responsive: true,</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>maintainAspectRatio: false,</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>cutout: '60%',</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>animation: {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>animateRotate: true,</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>animateScale: true,</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>duration: 1500</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>},</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>plugins: {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>// Configuration for the datalabels plugin</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>datalabels: {</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>color: '#ffffff',</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>textAlign: 'center',</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>font: {</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>weight: 'bold',</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>size: 14,</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>family: "'Inter', sans-serif"</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>},</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>// Formatter to show percentage and the raw value</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>formatter: (value, ctx) =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>const datapoints = ctx.chart.data.datasets[0].data;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>const total = datapoints.reduce((total, datapoint) =&gt; total + datapoint, 0);</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>const percentage = (value / total * 100).toFixed(1);</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>// We show the label only if it's a significant percentage</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>if (percentage &lt; 5) {</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>return '';</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>return `${percentage}%\n(${value.toLocaleString()})`;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>},</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>legend: {</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>position: 'bottom',</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>labels: {</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>color: '#d1d5db', // Text color for labels</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>font: {</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>size: 14,</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>family: "'Inter', sans-serif"</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>},</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>padding: 20</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>},</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>tooltip: {</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>enabled: true,</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>backgroundColor: 'rgba(31, 41, 55, 0.8)',</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>titleFont: { size: 16, weight: 'bold' },</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>bodyFont: { size: 14 },</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>padding: 12,</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>cornerRadius: 8,</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>callbacks: {</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>label: function(context) {</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>let label = context.dataset.label || '';</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>if (label) {</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>label += ': ';</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>if (context.parsed !== null) {</p>
+<p class="p1"><span class="Apple-converted-space">                                        </span>label += context.parsed.toLocaleString();</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                                    </span>return `<span class="Apple-converted-space">  </span>${context.label}: ${context.formattedValue}`;</p>
+<p class="p1"><span class="Apple-converted-space">                                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>};</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Create the chart</p>
+<p class="p1"><span class="Apple-converted-space">            </span>new Chart(ctx, chartConfig);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
