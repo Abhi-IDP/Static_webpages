@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>August 2025 Metrics Dashboard</title>
+    <title>September 2025 Metrics Dashboard</title>
     <!-- Tailwind CSS for styling -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Chart.js for beautiful, animated charts -->
@@ -41,7 +41,7 @@
         <!-- Header -->
         <header class="text-center mb-8 md:mb-12 fade-in">
             <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight">
-                Monthly Metrics: <span class="text-cyan-400">August 2025</span>
+                Monthly Metrics: <span class="text-cyan-400">September 2025</span>
             </h1>
             <p class="text-lg md:text-xl text-gray-400 mt-2">A snapshot of Identity Provisioning and Offboarding activities.</p>
         </header>
@@ -52,7 +52,7 @@
             <!-- Card 1: ID Provisioning Breakdown Chart -->
             <div class="lg:col-span-2 bg-gray-800/50 p-6 md:p-8 rounded-2xl shadow-2xl border border-gray-700/60 fade-in delay-1 opacity-0" style="backdrop-filter: blur(10px);">
                 <h2 class="text-2xl font-bold mb-1 text-cyan-300">Identity Provisioning by Channel</h2>
-                <p class="text-gray-400 mb-6">Total id's provisioned in August 49524</p>
+                <p class="text-gray-400 mb-6">Total id's provisioned in September 7417</p>
                 <div class="relative h-64 md:h-80">
                     <canvas id="provisioningChart"></canvas>
                 </div>
@@ -96,7 +96,7 @@
             };
 
             // Data from your "Offboarding_metrics.xlsx" file
-            const offboardingTotal = 9033;
+            const offboardingTotal = 6516;
             animateCountUp('offboarding-count', offboardingTotal);
 
 
@@ -112,7 +112,7 @@
                 labels: ['HR (Employees)', 'DRMS (Contractors)', 'ID Portal', 'CRMS (Vendors)'],
                 datasets: [{
                     label: 'Provisioned Identities',
-                    data: [28430, 15869, 1617, 3608], // HR, DRMS, ID Portal Total, CRMS
+                    data: [3745, 2139, 1039, 494], // HR, DRMS, ID Portal Total, CRMS
                     backgroundColor: [
                         'rgba(34, 197, 94, 0.7)',  // Green
                         'rgba(59, 130, 246, 0.7)', // Blue
